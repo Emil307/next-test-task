@@ -3,8 +3,8 @@ import CredentialsProvider from '@auth/core/providers/credentials';
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import bcrypt from 'bcryptjs';
 
-import type { UserRole } from '@xenous/db';
-import { db } from '@xenous/db';
+import type { UserRole } from '@next-test-task/db';
+import { db } from '@next-test-task/db';
 
 import { env } from '../env';
 

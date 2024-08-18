@@ -1,5 +1,5 @@
 {
-    "name": "@xenous/tailwind-config",
+    "name": "@next-test-task/tailwind-config",
     "version": "0.1.0",
     "private": true,
     "type": "module",
@@ -16,9 +16,9 @@
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.7",
-        "@xenous/eslint-config": "workspace:*",
-        "@xenous/prettier-config": "workspace:*",
-        "@xenous/tsconfig": "workspace:*",
+        "@next-test-task/eslint-config": "workspace:*",
+        "@next-test-task/prettier-config": "workspace:*",
+        "@next-test-task/tsconfig": "workspace:*",
         "eslint": "^9.0.0",
         "postcss": "^8.4.38",
         "prettier": "^3.2.5",
@@ -26,5 +26,5 @@
         "tailwindcss-animate": "^1.0.7",
         "typescript": "^5.4.4"
     },
-    "prettier": "@xenous/prettier-config"
+    "prettier": "@next-test-task/prettier-config"
 }

@@ -1,5 +1,5 @@
 {
-    "name": "@xenous/ui",
+    "name": "@next-test-task/ui",
     "private": true,
     "version": "0.1.0",
     "type": "module",
@@ -35,10 +35,10 @@
     },
     "devDependencies": {
         "@types/react": "^18.2.74",
-        "@xenous/eslint-config": "workspace:*",
-        "@xenous/prettier-config": "workspace:*",
-        "@xenous/tailwind-config": "workspace:*",
-        "@xenous/tsconfig": "workspace:*",
+        "@next-test-task/eslint-config": "workspace:*",
+        "@next-test-task/prettier-config": "workspace:*",
+        "@next-test-task/tailwind-config": "workspace:*",
+        "@next-test-task/tsconfig": "workspace:*",
         "eslint": "^9.0.0",
         "prettier": "^3.2.5",
         "react": "18.2.0",
@@ -50,5 +50,5 @@
         "react": "18.2.0",
         "zod": "^3.22.4"
     },
-    "prettier": "@xenous/prettier-config"
+    "prettier": "@next-test-task/prettier-config"
 }

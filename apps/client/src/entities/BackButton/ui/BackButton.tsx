@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 
-import { Button } from '@xenous/ui/button';
+import { Button } from '@next-test-task/ui/button';
 
 import type { PropsOf } from '~/shared/lib';
 

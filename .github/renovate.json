@@ -3,7 +3,7 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@xenous/"],
+      "matchPackagePatterns": ["^@next-test-task/"],
       "enabled": false
     }
   ],

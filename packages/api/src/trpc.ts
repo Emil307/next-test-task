@@ -2,9 +2,9 @@ import { initTRPC, TRPCError } from '@trpc/server';
 import superjson from 'superjson';
 import { ZodError } from 'zod';
 
-import type { Session } from '@xenous/auth';
-import { db } from '@xenous/db';
-import { http } from '@xenous/http';
+import type { Session } from '@next-test-task/auth';
+import { db } from '@next-test-task/db';
+import { http } from '@next-test-task/http';
 
 export const createTRPCContext = (opts: { headers: Headers; session: Session | null }) => {
     const session = opts.session;

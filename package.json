@@ -1,5 +1,5 @@
 {
-    "name": "xenous",
+    "name": "next-test-task",
     "private": true,
     "engines": {
         "node": ">=20.12.0"
@@ -26,13 +26,13 @@
     },
     "devDependencies": {
         "@turbo/gen": "^1.13.2",
-        "@xenous/prettier-config": "workspace:*",
+        "@next-test-task/prettier-config": "workspace:*",
         "lint-staged": "^15.2.2",
         "prettier": "^3.2.5",
         "turbo": "^1.13.2",
         "typescript": "^5.4.4"
     },
-    "prettier": "@xenous/prettier-config",
+    "prettier": "@next-test-task/prettier-config",
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": "turbo --output-logs none lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
         "*.{js,jsx,ts,tsx,html,css}": "pnpm prettier --check --write"

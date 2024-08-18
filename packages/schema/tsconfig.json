@@ -1,5 +1,5 @@
 {
-    "extends": "@xenous/tsconfig/internal-package.json",
+    "extends": "@next-test-task/tsconfig/internal-package.json",
     "compilerOptions": {
         "outDir": "dist",
         "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"

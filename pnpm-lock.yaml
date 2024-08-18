@@ -11,7 +11,7 @@ importers:
       '@turbo/gen':
         specifier: ^1.13.2
         version: 1.13.2(@types/node@20.12.7)(typescript@5.4.4)
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:tooling/prettier
       lint-staged:
@@ -47,25 +47,25 @@ importers:
       '@trpc/server':
         specifier: 11.0.0-next.320
         version: 11.0.0-next.320
-      '@xenous/api':
+      '@next-test-task/api':
         specifier: workspace:*
         version: link:../../packages/api
-      '@xenous/auth':
+      '@next-test-task/auth':
         specifier: workspace:*
         version: link:../../packages/auth
-      '@xenous/db':
+      '@next-test-task/db':
         specifier: workspace:*
         version: link:../../packages/db
-      '@xenous/http':
+      '@next-test-task/http':
         specifier: workspace:*
         version: link:../../packages/http
-      '@xenous/logger':
+      '@next-test-task/logger':
         specifier: workspace:*
         version: link:../../packages/logger
-      '@xenous/schema':
+      '@next-test-task/schema':
         specifier: workspace:*
         version: link:../../packages/schema
-      '@xenous/ui':
+      '@next-test-task/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       date-fns:
@@ -111,16 +111,16 @@ importers:
       '@types/ua-parser-js':
         specifier: ^0.7.39
         version: 0.7.39
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tailwind-config':
+      '@next-test-task/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       autoprefixer:
@@ -156,19 +156,19 @@ importers:
       '@trpc/server':
         specifier: 11.0.0-next.320
         version: 11.0.0-next.320
-      '@xenous/auth':
+      '@next-test-task/auth':
         specifier: workspace:*
         version: link:../auth
-      '@xenous/db':
+      '@next-test-task/db':
         specifier: workspace:*
         version: link:../db
-      '@xenous/http':
+      '@next-test-task/http':
         specifier: workspace:*
         version: link:../http
-      '@xenous/logger':
+      '@next-test-task/logger':
         specifier: workspace:*
         version: link:../logger
-      '@xenous/schema':
+      '@next-test-task/schema':
         specifier: workspace:*
         version: link:../schema
       superjson:
@@ -178,13 +178,13 @@ importers:
         specifier: ^3.22.4
         version: 3.22.4
     devDependencies:
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -205,7 +205,7 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.9.2
         version: 0.9.2(typescript@5.4.4)(zod@3.22.4)
-      '@xenous/db':
+      '@next-test-task/db':
         specifier: workspace:*
         version: link:../db
       bcryptjs:
@@ -230,13 +230,13 @@ importers:
       '@types/bcryptjs':
         specifier: ^2.4.6
         version: 2.4.6
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -258,13 +258,13 @@ importers:
         specifier: ^0.9.2
         version: 0.9.2(typescript@5.4.4)(zod@3.22.4)
     devDependencies:
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       dotenv-cli:
@@ -288,7 +288,7 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.9.2
         version: 0.9.2(typescript@5.4.4)(zod@3.22.4)
-      '@xenous/logger':
+      '@next-test-task/logger':
         specifier: workspace:*
         version: link:../logger
       axios:
@@ -298,13 +298,13 @@ importers:
         specifier: ^3.22.4
         version: 3.22.4
     devDependencies:
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -335,13 +335,13 @@ importers:
         specifier: ^3.22.4
         version: 3.22.4
     devDependencies:
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -360,13 +360,13 @@ importers:
         specifier: ^3.22.4
         version: 3.22.4
     devDependencies:
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -421,16 +421,16 @@ importers:
       '@types/react':
         specifier: ^18.2.74
         version: 18.2.75
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@xenous/tailwind-config':
+      '@next-test-task/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -479,10 +479,10 @@ importers:
       '@types/eslint-config-prettier':
         specifier: ^6.11.3
         version: 6.11.3
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       eslint:
@@ -515,7 +515,7 @@ importers:
         specifier: ^0.5.13
         version: 0.5.13(@ianvs/prettier-plugin-sort-imports@4.2.1(prettier@3.2.5))(prettier@3.2.5)
     devDependencies:
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       typescript:
@@ -527,13 +527,13 @@ importers:
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.3(ts-node@10.9.2(@types/node@20.12.7)(typescript@5.4.4)))
-      '@xenous/eslint-config':
+      '@next-test-task/eslint-config':
         specifier: workspace:*
         version: link:../eslint
-      '@xenous/prettier-config':
+      '@next-test-task/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@xenous/tsconfig':
+      '@next-test-task/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       eslint:

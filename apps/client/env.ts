@@ -3,11 +3,11 @@
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
-import { env as apiEnv } from '@xenous/api/env';
-import { env as authEnv } from '@xenous/auth/env';
-import { env as dbEnv } from '@xenous/db/env';
-import { env as httpEnv } from '@xenous/http/env';
-import { env as loggerEnv } from '@xenous/logger/env';
+import { env as apiEnv } from '@next-test-task/api/env';
+import { env as authEnv } from '@next-test-task/auth/env';
+import { env as dbEnv } from '@next-test-task/db/env';
+import { env as httpEnv } from '@next-test-task/http/env';
+import { env as loggerEnv } from '@next-test-task/logger/env';
 
 export const env = createEnv({
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

@@ -3,7 +3,7 @@
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
-import { env as dbEnv } from '@xenous/db/env';
+import { env as dbEnv } from '@next-test-task/db/env';
 
 export const env = createEnv({
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
