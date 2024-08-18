@@ -1,4 +1,4 @@
-# Xenous Turborepo Template
+# Next-test-task Turborepo Template
 
 ## Quick Start
 
@@ -14,7 +14,7 @@ The best option is to use NVM and Corepack via `corepack enable`, so required ve
 
 ```bash
 # Rename project
-pnpm rename <name_instead_of_xenous>
+pnpm rename <name_instead_of_next-test-task>
 
 # Install dependencies
 pnpm i

@@ -1,5 +1,5 @@
 {
-    "name": "@xenous/prettier-config",
+    "name": "@next-test-task/prettier-config",
     "private": true,
     "version": "0.1.0",
     "type": "module",
@@ -17,8 +17,8 @@
         "prettier-plugin-tailwindcss": "^0.5.13"
     },
     "devDependencies": {
-        "@xenous/tsconfig": "workspace:*",
+        "@next-test-task/tsconfig": "workspace:*",
         "typescript": "^5.4.4"
     },
-    "prettier": "@xenous/prettier-config"
+    "prettier": "@next-test-task/prettier-config"
 }

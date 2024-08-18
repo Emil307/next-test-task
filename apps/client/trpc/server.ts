@@ -1,8 +1,8 @@
 import { cache } from 'react';
 import { headers } from 'next/headers';
 
-import { createCaller, createTRPCContext } from '@xenous/api';
-import { auth } from '@xenous/auth';
+import { createCaller, createTRPCContext } from '@next-test-task/api';
+import { auth } from '@next-test-task/auth';
 
 const createContext = cache(async () => {
     const heads = new Headers(headers());

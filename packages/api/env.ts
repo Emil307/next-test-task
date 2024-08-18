@@ -3,9 +3,9 @@
 
 import { createEnv } from '@t3-oss/env-nextjs';
 
-import { env as authEnv } from '@xenous/auth/env';
-import { env as dbEnv } from '@xenous/db/env';
-import { env as httpEnv } from '@xenous/http/env';
+import { env as authEnv } from '@next-test-task/auth/env';
+import { env as dbEnv } from '@next-test-task/db/env';
+import { env as httpEnv } from '@next-test-task/http/env';
 
 export const env = createEnv({
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

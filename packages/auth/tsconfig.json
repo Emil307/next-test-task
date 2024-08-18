@@ -1,5 +1,5 @@
 {
-    "extends": "@xenous/tsconfig/base.json",
+    "extends": "@next-test-task/tsconfig/base.json",
     "compilerOptions": {
         "jsx": "preserve",
         "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"

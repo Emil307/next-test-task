@@ -3,7 +3,7 @@
 import type { ElementRef } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { cn } from '@xenous/ui';
+import { cn } from '@next-test-task/ui';
 
 import type { PropsOf } from '~/shared/lib';
 

@@ -10,13 +10,13 @@ interface PackageJson {
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator("init", {
-    description: "Generate a new package for the Xenous Monorepo",
+    description: "Generate a new package for the Next-test-task Monorepo",
     prompts: [
       {
         type: "input",
         name: "name",
         message:
-          "What is the name of the package? (You can skip the `@xenous/` prefix)",
+          "What is the name of the package? (You can skip the `@next-test-task/` prefix)",
       },
       {
         type: "input",
@@ -28,8 +28,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     actions: [
       (answers) => {
         if ("name" in answers && typeof answers.name === "string") {
-          if (answers.name.startsWith("@xenous/")) {
-            answers.name = answers.name.replace("@xenous/", "");
+          if (answers.name.startsWith("@next-test-task/")) {
+            answers.name = answers.name.replace("@next-test-task/", "");
           }
         }
         return "Config sanitized";

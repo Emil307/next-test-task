@@ -2,7 +2,7 @@ import type { VariantProps } from 'class-variance-authority';
 import { forwardRef, memo } from 'react';
 import { cva } from 'class-variance-authority';
 
-import { cn } from '@xenous/ui';
+import { cn } from '@next-test-task/ui';
 
 const spinnerVariants = cva('animate-spin motion-safe:duration-700', {
     variants: {

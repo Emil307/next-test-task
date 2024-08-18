@@ -1,7 +1,7 @@
 import type { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import styles from 'ansi-styles';
 
-import { logger } from '@xenous/logger';
+import { logger } from '@next-test-task/logger';
 
 import { env } from '../../env';
 import { HttpError } from '../error';

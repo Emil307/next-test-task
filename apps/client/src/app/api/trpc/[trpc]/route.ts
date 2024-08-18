@@ -1,7 +1,7 @@
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
 
-import { appRouter, createTRPCContext } from '@xenous/api';
-import { auth } from '@xenous/auth';
+import { appRouter, createTRPCContext } from '@next-test-task/api';
+import { auth } from '@next-test-task/auth';
 
 /**
  * Configure basic CORS headers

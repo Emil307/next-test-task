@@ -10,7 +10,7 @@
         "cssVariables": true
     },
     "aliases": {
-        "utils": "@xenous/ui",
+        "utils": "@next-test-task/ui",
         "components": "src/",
         "ui": "src/"
     }

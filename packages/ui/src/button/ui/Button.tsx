@@ -7,7 +7,7 @@ import { Slot, Slottable } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
 import { mergeProps, useLongPress, usePress } from 'react-aria';
 
-import { cn } from '@xenous/ui';
+import { cn } from '@next-test-task/ui';
 
 import { Spinner } from '../../spinner';
 

@@ -1,1 +1,1 @@
-export * from '@xenous/auth/sign-up/credentials/user';
+export * from '@next-test-task/auth/sign-up/credentials/user';

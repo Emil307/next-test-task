@@ -1,16 +1,16 @@
 import type { Metadata, Viewport } from 'next';
 import { Noto_Sans } from 'next/font/google';
 
-import { cn } from '@xenous/ui';
+import { cn } from '@next-test-task/ui';
 
 import { Providers } from '../(_providers)';
 
 import '~/styles/globals.scss';
 
 export const metadata: Metadata = {
-    applicationName: 'Xenous',
-    title: 'Xenous',
-    description: 'Xenous',
+    applicationName: 'Next-test-task',
+    title: 'Next-test-task',
+    description: 'Next-test-task',
     icons: [
         { rel: 'icon', url: '/favicon.ico' },
         { rel: 'manifest', url: '/manifest.json' },
