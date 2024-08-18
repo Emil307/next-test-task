@@ -15,6 +15,7 @@ export default () => {
         }
         if (window.pageYOffset < 100) {
             setIsBorderActive(false);
+            return;
         }
     });
 
