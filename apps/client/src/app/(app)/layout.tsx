@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 import { cn } from '@next-test-task/ui';
 
@@ -41,10 +41,10 @@ export const viewport: Viewport = {
     ],
 };
 
-const notoSans = Noto_Sans({
+const inter = Inter({
     subsets: ['latin', 'cyrillic'],
     weight: 'variable',
-    variable: '--font-noto-sans',
+    variable: '--font-inter',
 });
 
 export default ({ children }: React.PropsWithChildren) => {
@@ -54,8 +54,8 @@ export default ({ children }: React.PropsWithChildren) => {
             <body
                 className={cn(
                     'min-h-dvh w-full min-w-full scroll-smooth bg-argent-900',
-                    'font-noto-sans text-primary antialiased',
-                    notoSans.variable
+                    'font-inter text-primary antialiased',
+                    inter.variable
                 )}
             >
                 <Providers>{children}</Providers>
