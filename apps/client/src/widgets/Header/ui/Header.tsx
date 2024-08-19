@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { cn } from '@next-test-task/ui';
 import { Modal, ModalRoot, ModalTriger } from '@next-test-task/ui/modal';
 
+import { Tariffs } from '~/features/Tariffs';
+
 export default () => {
     const [isBorderActive, setIsBorderActive] = useState<boolean>(false);
 
@@ -37,7 +39,9 @@ export default () => {
                 </div>
             </div>
 
-            <Modal></Modal>
+            <Modal>
+                <Tariffs />
+            </Modal>
         </ModalRoot>
     );
 };
