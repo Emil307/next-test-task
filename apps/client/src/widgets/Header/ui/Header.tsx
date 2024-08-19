@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { cn } from '@next-test-task/ui';
 import { Modal, ModalRoot, ModalTriger } from '@next-test-task/ui/modal';
@@ -31,11 +32,11 @@ export default () => {
                 )}
             >
                 <Image src='/assets/icons/brand.svg' width={128} height={40} alt='brand' />
-                <div className='align-center flex gap-4'>
+                <div className='flex items-center gap-4'>
                     <ModalTriger asChild>
                         <button>Tariffs</button>
                     </ModalTriger>
-                    <button>About us</button>
+                    <Link href='#about-section'>About us</Link>
                 </div>
             </div>
 
