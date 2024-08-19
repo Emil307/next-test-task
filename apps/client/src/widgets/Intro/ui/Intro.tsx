@@ -17,9 +17,7 @@ export default () => {
                     </Triger>
                 </div>
             </div>
-            <Modal>
-                <div className='h-96 w-24 bg-black'></div>
-            </Modal>
+            <Modal></Modal>
         </ModalRoot>
     );
 };
