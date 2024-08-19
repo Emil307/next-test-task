@@ -43,7 +43,7 @@ export default () => {
                     <ModalTriger asChild>
                         <button>Tariffs</button>
                     </ModalTriger>
-                    <Link href='#about-section'>About us</Link>
+                    <Link href='#about-section'>About</Link>
                 </div>
             </div>
 
