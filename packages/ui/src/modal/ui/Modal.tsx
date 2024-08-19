@@ -1,0 +1,32 @@
+import * as Dialog from '@radix-ui/react-dialog';
+import { Cross2Icon } from '@radix-ui/react-icons';
+
+const ModalRoot: React.FC<React.PropsWithChildren> = ({ children }) => {
+    return <Dialog.Root>{children}</Dialog.Root>;
+};
+
+const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
+    return (
+        <Dialog.Portal>
+            <Dialog.Overlay className='fixed left-0 top-0 h-screen w-screen bg-black opacity-30' />
+            <div className='fixed left-0 top-0 flex h-screen w-screen items-center justify-center'>
+                <Dialog.Content className='relative h-fit w-96 rounded-4 bg-white p-4'>
+                    {children}
+                    <Dialog.Close asChild>
+                        <button className='absolute right-4 top-4' aria-label='Close'>
+                            <Cross2Icon />
+                        </button>
+                    </Dialog.Close>
+                </Dialog.Content>
+            </div>
+        </Dialog.Portal>
+    );
+};
+
+const Triger: React.FC<React.PropsWithChildren> = ({ children }) => {
+    return <Dialog.Trigger asChild>{children}</Dialog.Trigger>;
+};
+
+export default Modal;
+
+export { ModalRoot, Modal, Triger };
