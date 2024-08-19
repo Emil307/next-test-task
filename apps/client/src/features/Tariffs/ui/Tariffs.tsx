@@ -1,10 +1,8 @@
 'use client';
 
 import type { SubmitHandler } from 'react-hook-form';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { Button } from '@next-test-task/ui/button';
 import { ModalDescription, ModalTitle } from '@next-test-task/ui/modal';
 
 import { Tariff } from '~/entities/Tariff';
@@ -85,8 +83,9 @@ const enterpricePossibilities = [
 ];
 
 export default () => {
-    const { register, handleSubmit } = useForm<IFormFileds>();
-    const [activeTariff, setActiveTariff] = useState('free');
+    const { register, watch, handleSubmit } = useForm<IFormFileds>();
+
+    const watchTariff = watch('tariff', 'free');
 
     const onSubmit: SubmitHandler<IFormFileds> = data => {
         console.log(`selected tariff - ${data.tariff}`);
@@ -103,23 +102,21 @@ export default () => {
                     <Tariff
                         title='Free'
                         possibilities={freePossibilities}
-                        isActive={activeTariff === 'free' ? true : false}
+                        isActive={watchTariff === 'free' ? true : false}
                         htmlFor='free-radio'
                     />
                     <input
                         className='hidden opacity-0'
                         id='free-radio'
                         type='radio'
-                        {...register('tariff', {
-                            required: 'Обязательное поле',
-                        })}
+                        {...register('tariff')}
                         value='free'
-                        onChange={event => setActiveTariff(event.target.value)}
+                        defaultChecked
                     />
 
                     <Tariff
                         possibilities={proPossibilities}
-                        isActive={activeTariff === 'pro' ? true : false}
+                        isActive={watchTariff === 'pro' ? true : false}
                         title='Pro'
                         htmlFor='pro-radio'
                     />
@@ -127,16 +124,13 @@ export default () => {
                         className='hidden opacity-0'
                         id='pro-radio'
                         type='radio'
-                        {...register('tariff', {
-                            required: 'Обязательное поле',
-                        })}
+                        {...register('tariff')}
                         value='pro'
-                        onChange={event => setActiveTariff(event.target.value)}
                     />
 
                     <Tariff
                         possibilities={enterpricePossibilities}
-                        isActive={activeTariff === 'enterprice' ? true : false}
+                        isActive={watchTariff === 'enterprice' ? true : false}
                         title='Enterprice'
                         htmlFor='enterprice-radio'
                     />
@@ -144,17 +138,14 @@ export default () => {
                         className='hidden opacity-0'
                         id='enterprice-radio'
                         type='radio'
-                        {...register('tariff', {
-                            required: 'Обязательное поле',
-                        })}
+                        {...register('tariff')}
                         value='enterprice'
-                        onChange={event => setActiveTariff(event.target.value)}
                     />
                 </div>
             </div>
-            <Button variant={'primary'}>
-                <strong className='text-20 font-600'>Apply</strong>
-            </Button>
+            <button className='flex h-14 w-64 items-center justify-center rounded-8 bg-accent text-20 font-600 text-white'>
+                Apply
+            </button>
         </form>
     );
 };

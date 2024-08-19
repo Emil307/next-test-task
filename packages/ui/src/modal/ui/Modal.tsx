@@ -25,10 +25,15 @@ export const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
 
 interface IModalTriger extends React.PropsWithChildren {
     asChild?: boolean;
+    type?: 'button' | 'submit' | 'reset';
 }
 
-export const ModalTriger: React.FC<IModalTriger> = ({ children, asChild }) => {
-    return <Dialog.Trigger asChild={asChild ? true : false}>{children}</Dialog.Trigger>;
+export const ModalTriger: React.FC<IModalTriger> = ({ children, asChild, type }) => {
+    return (
+        <Dialog.Trigger asChild={asChild ? true : false} type={type}>
+            {children}
+        </Dialog.Trigger>
+    );
 };
 
 export const ModalTitle: React.FC<React.PropsWithChildren> = ({ children }) => {
