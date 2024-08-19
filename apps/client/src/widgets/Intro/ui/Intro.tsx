@@ -13,7 +13,7 @@ export default () => {
                         written in Rust.
                     </p>
                     <Triger>
-                        <button className='flex h-14 w-64 items-center justify-center rounded-8 bg-accent text-20 font-600 text-white transition-colors duration-300 hover:bg-primary'>
+                        <button className='flex h-14 w-64 items-center justify-center rounded-8 bg-accent text-20 font-600 text-white'>
                             Tariffs
                         </button>
                     </Triger>
