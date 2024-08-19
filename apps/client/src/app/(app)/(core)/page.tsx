@@ -6,9 +6,6 @@ export default () => {
         <>
             <Header />
             <Intro />
-            <Intro />
-            <Intro />
-            <Intro />
         </>
     );
 };

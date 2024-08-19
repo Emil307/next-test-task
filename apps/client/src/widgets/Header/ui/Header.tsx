@@ -4,7 +4,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { cn } from '@next-test-task/ui';
-import { Modal, ModalRoot, Triger } from '@next-test-task/ui/modal';
+import { Modal, ModalRoot, ModalTriger } from '@next-test-task/ui/modal';
+
+import { Tariffs } from '~/features/Tariffs';
 
 export default () => {
     const [isBorderActive, setIsBorderActive] = useState<boolean>(false);
@@ -30,14 +32,16 @@ export default () => {
             >
                 <Image src='/assets/icons/brand.svg' width={128} height={40} alt='brand' />
                 <div className='align-center flex gap-4'>
-                    <Triger>
+                    <ModalTriger asChild>
                         <button>Tariffs</button>
-                    </Triger>
+                    </ModalTriger>
                     <button>About us</button>
                 </div>
             </div>
 
-            <Modal></Modal>
+            <Modal>
+                <Tariffs />
+            </Modal>
         </ModalRoot>
     );
 };

@@ -1,16 +1,16 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 
-const ModalRoot: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const ModalRoot: React.FC<React.PropsWithChildren> = ({ children }) => {
     return <Dialog.Root>{children}</Dialog.Root>;
 };
 
-const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className='fixed left-0 top-0 h-screen w-screen bg-black opacity-30' />
             <div className='fixed left-0 top-0 flex h-screen w-screen items-center justify-center'>
-                <Dialog.Content className='relative h-fit w-96 rounded-4 bg-white p-4'>
+                <Dialog.Content className='relative h-fit w-fit rounded-4 bg-white p-4'>
                     {children}
                     <Dialog.Close asChild>
                         <button className='absolute right-4 top-4' aria-label='Close'>
@@ -23,10 +23,23 @@ const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
     );
 };
 
-const Triger: React.FC<React.PropsWithChildren> = ({ children }) => {
-    return <Dialog.Trigger asChild>{children}</Dialog.Trigger>;
+interface IModalTriger extends React.PropsWithChildren {
+    asChild?: boolean;
+    type?: 'button' | 'submit' | 'reset';
+}
+
+export const ModalTriger: React.FC<IModalTriger> = ({ children, asChild, type }) => {
+    return (
+        <Dialog.Trigger asChild={asChild ? true : false} type={type}>
+            {children}
+        </Dialog.Trigger>
+    );
 };
 
-export default Modal;
+export const ModalTitle: React.FC<React.PropsWithChildren> = ({ children }) => {
+    return <Dialog.Title>{children}</Dialog.Title>;
+};
 
-export { ModalRoot, Modal, Triger };
+export const ModalDescription: React.FC<React.PropsWithChildren> = ({ children }) => {
+    return <Dialog.Description>{children}</Dialog.Description>;
+};
