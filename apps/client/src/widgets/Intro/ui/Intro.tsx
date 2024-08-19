@@ -1,5 +1,7 @@
 import { Modal, ModalRoot, Triger } from '@next-test-task/ui/modal';
 
+import { Tariffs } from '~/features/Tariffs';
+
 export default () => {
     return (
         <ModalRoot>
@@ -17,7 +19,9 @@ export default () => {
                     </Triger>
                 </div>
             </div>
-            <Modal></Modal>
+            <Modal>
+                <Tariffs />
+            </Modal>
         </ModalRoot>
     );
 };
