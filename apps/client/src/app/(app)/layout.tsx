@@ -7,6 +7,8 @@ import { Providers } from '../(_providers)';
 
 import '~/styles/globals.scss';
 
+import dynamic from 'next/dynamic';
+
 export const metadata: Metadata = {
     applicationName: 'Next-test-task',
     title: 'Next-test-task',
@@ -47,6 +49,10 @@ const inter = Inter({
     variable: '--font-inter',
 });
 
+const TariffDialog = dynamic(() => import('~/features/TariffDialog').then(module => module.TariffDialog), {
+    ssr: false,
+});
+
 export default ({ children }: React.PropsWithChildren) => {
     return (
         <html lang={'ru'} dir={'ltr'} suppressHydrationWarning>
@@ -61,7 +67,10 @@ export default ({ children }: React.PropsWithChildren) => {
                     scrollbarGutter: 'stable',
                 }}
             >
-                <Providers>{children}</Providers>
+                <Providers>
+                    {children}
+                    <TariffDialog />
+                </Providers>
             </body>
         </html>
     );
