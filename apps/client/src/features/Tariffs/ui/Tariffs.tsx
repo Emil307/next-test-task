@@ -96,7 +96,7 @@ export default () => {
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-end gap-8'>
             <div className='flex flex-col gap-4'>
                 <ModalTitle>
-                    <h3 className='text-24 font-600'>Tariffs</h3>
+                    <p className='text-24 font-600'>Tariffs</p>
                 </ModalTitle>
                 <ModalDescription></ModalDescription>
                 <div className='flex items-start gap-4'>
