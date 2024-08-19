@@ -23,8 +23,12 @@ export const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
     );
 };
 
-export const ModalTriger: React.FC<React.PropsWithChildren> = ({ children }) => {
-    return <Dialog.Trigger asChild>{children}</Dialog.Trigger>;
+interface IModalTriger extends React.PropsWithChildren {
+    asChild?: boolean;
+}
+
+export const ModalTriger: React.FC<IModalTriger> = ({ children, asChild }) => {
+    return <Dialog.Trigger asChild={asChild ? true : false}>{children}</Dialog.Trigger>;
 };
 
 export const ModalTitle: React.FC<React.PropsWithChildren> = ({ children }) => {

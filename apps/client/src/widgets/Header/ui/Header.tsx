@@ -32,7 +32,7 @@ export default () => {
             >
                 <Image src='/assets/icons/brand.svg' width={128} height={40} alt='brand' />
                 <div className='align-center flex gap-4'>
-                    <ModalTriger>
+                    <ModalTriger asChild>
                         <button>Tariffs</button>
                     </ModalTriger>
                     <button>About us</button>
