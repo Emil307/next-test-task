@@ -53,8 +53,8 @@ export default ({ children }: React.PropsWithChildren) => {
             <head />
             <body
                 className={cn(
-                    'min-h-dvh w-full min-w-full scroll-smooth bg-argent-900',
-                    'font-inter text-primary antialiased',
+                    'min-h-dvh w-full min-w-full scroll-smooth bg-white',
+                    'font-inter text-black antialiased',
                     inter.variable
                 )}
             >
