@@ -28,7 +28,9 @@ export const Tariff: React.FC<ITariffProps> = ({ htmlFor, title, isActive, possi
                     </li>
                 ))}
             </ul>
-            <Button variant={isActive ? 'primary' : 'outline'}>{isActive ? 'selected' : 'select'}</Button>
+            <Button className='pointer-events-none' variant={isActive ? 'primary' : 'outline'}>
+                {isActive ? 'selected' : 'select'}
+            </Button>
         </label>
     );
 };
