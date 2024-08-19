@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,17 +11,24 @@ import { Tariffs } from '~/features/Tariffs';
 
 export default () => {
     const [isBorderActive, setIsBorderActive] = useState<boolean>(false);
+    const [isMounted, setIsMounted] = useState<boolean>(false);
 
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset >= 100) {
-            setIsBorderActive(true);
+    useEffect(() => {
+        if (!isMounted) {
+            setIsMounted(true);
             return;
         }
-        if (window.pageYOffset < 100) {
-            setIsBorderActive(false);
-            return;
-        }
-    });
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset >= 100) {
+                setIsBorderActive(true);
+                return;
+            }
+            if (window.pageYOffset < 100) {
+                setIsBorderActive(false);
+                return;
+            }
+        });
+    }, [isMounted]);
 
     return (
         <ModalRoot>
