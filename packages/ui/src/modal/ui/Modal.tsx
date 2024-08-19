@@ -1,11 +1,11 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 
-const ModalRoot: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const ModalRoot: React.FC<React.PropsWithChildren> = ({ children }) => {
     return <Dialog.Root>{children}</Dialog.Root>;
 };
 
-const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
     return (
         <Dialog.Portal>
             <Dialog.Overlay className='fixed left-0 top-0 h-screen w-screen bg-black opacity-30' />
@@ -23,10 +23,14 @@ const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {
     );
 };
 
-const Triger: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const ModalTriger: React.FC<React.PropsWithChildren> = ({ children }) => {
     return <Dialog.Trigger asChild>{children}</Dialog.Trigger>;
 };
 
-export default Modal;
+export const ModalTitle: React.FC<React.PropsWithChildren> = ({ children }) => {
+    return <Dialog.Title>{children}</Dialog.Title>;
+};
 
-export { ModalRoot, Modal, Triger };
+export const ModalDescription: React.FC<React.PropsWithChildren> = ({ children }) => {
+    return <Dialog.Description>{children}</Dialog.Description>;
+};

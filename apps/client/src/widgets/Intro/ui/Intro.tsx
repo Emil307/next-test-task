@@ -1,4 +1,4 @@
-import { Modal, ModalRoot, Triger } from '@next-test-task/ui/modal';
+import { Modal, ModalRoot, ModalTriger } from '@next-test-task/ui/modal';
 
 import { Tariffs } from '~/features/Tariffs';
 
@@ -12,11 +12,11 @@ export default () => {
                         Turbo is an incremental bundler and build system optimized for JavaScript and TypeScript,
                         written in Rust.
                     </p>
-                    <Triger>
+                    <ModalTriger>
                         <button className='flex h-14 w-64 items-center justify-center rounded-8 bg-accent text-20 font-600 text-white'>
                             Tariffs
                         </button>
-                    </Triger>
+                    </ModalTriger>
                 </div>
             </div>
             <Modal>

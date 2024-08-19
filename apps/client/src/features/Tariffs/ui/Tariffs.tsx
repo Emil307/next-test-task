@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Button } from '@next-test-task/ui/button';
+import { ModalDescription, ModalTitle } from '@next-test-task/ui/modal';
 
 import { Tariff } from '~/entities/Tariff';
 
@@ -92,60 +93,68 @@ export default () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className='flex items-start gap-4'>
-                <Tariff
-                    title='Free'
-                    possibilities={freePossibilities}
-                    isActive={activeTariff === 'free' ? true : false}
-                    htmlFor='free-radio'
-                />
-                <input
-                    className='hidden opacity-0'
-                    id='free-radio'
-                    type='radio'
-                    {...register('tariff', {
-                        required: 'Обязательное поле',
-                    })}
-                    value='free'
-                    onChange={event => setActiveTariff(event.target.value)}
-                />
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-end gap-8'>
+            <div className='flex flex-col gap-4'>
+                <ModalTitle>
+                    <h3 className='text-24 font-600'>Tariffs</h3>
+                </ModalTitle>
+                <ModalDescription></ModalDescription>
+                <div className='flex items-start gap-4'>
+                    <Tariff
+                        title='Free'
+                        possibilities={freePossibilities}
+                        isActive={activeTariff === 'free' ? true : false}
+                        htmlFor='free-radio'
+                    />
+                    <input
+                        className='hidden opacity-0'
+                        id='free-radio'
+                        type='radio'
+                        {...register('tariff', {
+                            required: 'Обязательное поле',
+                        })}
+                        value='free'
+                        onChange={event => setActiveTariff(event.target.value)}
+                    />
 
-                <Tariff
-                    possibilities={proPossibilities}
-                    isActive={activeTariff === 'pro' ? true : false}
-                    title='Pro'
-                    htmlFor='pro-radio'
-                />
-                <input
-                    className='hidden opacity-0'
-                    id='pro-radio'
-                    type='radio'
-                    {...register('tariff', {
-                        required: 'Обязательное поле',
-                    })}
-                    value='pro'
-                    onChange={event => setActiveTariff(event.target.value)}
-                />
+                    <Tariff
+                        possibilities={proPossibilities}
+                        isActive={activeTariff === 'pro' ? true : false}
+                        title='Pro'
+                        htmlFor='pro-radio'
+                    />
+                    <input
+                        className='hidden opacity-0'
+                        id='pro-radio'
+                        type='radio'
+                        {...register('tariff', {
+                            required: 'Обязательное поле',
+                        })}
+                        value='pro'
+                        onChange={event => setActiveTariff(event.target.value)}
+                    />
 
-                <Tariff
-                    possibilities={enterpricePossibilities}
-                    isActive={activeTariff === 'enterprice' ? true : false}
-                    title='Enterprice'
-                    htmlFor='enterprice-radio'
-                />
-                <input
-                    className='hidden opacity-0'
-                    id='enterprice-radio'
-                    type='radio'
-                    {...register('tariff', {
-                        required: 'Обязательное поле',
-                    })}
-                    value='enterprice'
-                    onChange={event => setActiveTariff(event.target.value)}
-                />
+                    <Tariff
+                        possibilities={enterpricePossibilities}
+                        isActive={activeTariff === 'enterprice' ? true : false}
+                        title='Enterprice'
+                        htmlFor='enterprice-radio'
+                    />
+                    <input
+                        className='hidden opacity-0'
+                        id='enterprice-radio'
+                        type='radio'
+                        {...register('tariff', {
+                            required: 'Обязательное поле',
+                        })}
+                        value='enterprice'
+                        onChange={event => setActiveTariff(event.target.value)}
+                    />
+                </div>
             </div>
-            <Button variant={'primary'}>submit</Button>
+            <Button variant={'primary'}>
+                <strong className='text-20 font-600'>Apply</strong>
+            </Button>
         </form>
     );
 };
