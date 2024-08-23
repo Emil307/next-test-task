@@ -18,16 +18,19 @@ export default () => {
             setIsMounted(true);
             return;
         }
-        window.addEventListener('scroll', () => {
+
+        const callback = () => {
             if (window.pageYOffset >= 100) {
                 setIsBorderActive(true);
                 return;
             }
-            if (window.pageYOffset < 100) {
-                setIsBorderActive(false);
-                return;
-            }
-        });
+            setIsBorderActive(false);
+            return;
+        };
+
+        window.addEventListener('scroll', callback);
+
+        return () => window.removeEventListener('scroll', callback);
     }, [isMounted]);
 
     return (
@@ -43,7 +46,7 @@ export default () => {
                     <ModalTriger asChild>
                         <button>Tariffs</button>
                     </ModalTriger>
-                    <Link href='#about-section'>About us</Link>
+                    <Link href='#about-section'>About</Link>
                 </div>
             </div>
 
