@@ -7,6 +7,6 @@ export const appRouter = createTRPCRouter({
     example: exampleRouter,
     google: googleRouter,
     developers: developersRouter,
-});
+)};
 
 export type AppRouter = typeof appRouter;
