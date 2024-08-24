@@ -1,8 +1,17 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 
-export const ModalRoot: React.FC<React.PropsWithChildren> = ({ children }) => {
-    return <Dialog.Root>{children}</Dialog.Root>;
+interface IModalRootProps extends React.PropsWithChildren {
+    open: boolean;
+    onOpenChange: (open: boolean) => void;
+}
+
+export const ModalRoot: React.FC<IModalRootProps> = ({ children, open, onOpenChange }) => {
+    return (
+        <Dialog.Root open={open} onOpenChange={onOpenChange}>
+            {children}
+        </Dialog.Root>
+    );
 };
 
 export const Modal: React.FC<React.PropsWithChildren> = ({ children }) => {

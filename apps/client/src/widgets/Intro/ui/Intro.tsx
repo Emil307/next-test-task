@@ -1,10 +1,15 @@
+'use client';
+
 import { Modal, ModalRoot, ModalTriger } from '@next-test-task/ui/modal';
 
+import { useTariffDialogState } from '~/features/TariffDialog';
 import { Tariffs } from '~/features/Tariffs';
 
 export default () => {
+    const [isModalOpen, setIsModalOpen] = useTariffDialogState();
+
     return (
-        <ModalRoot>
+        <ModalRoot open={isModalOpen} onOpenChange={setIsModalOpen}>
             <div className='flex h-screen items-center justify-center'>
                 <div className='flex h-fit w-2/5 flex-col items-center gap-4'>
                     <h1 className='text-center text-44 font-600'>Make Ship Happen</h1>

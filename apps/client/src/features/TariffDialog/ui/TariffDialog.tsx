@@ -3,7 +3,7 @@
 import { useTariffDialogState } from '../model/hooks';
 
 export default () => {
-    const [_open, _setOpen] = useTariffDialogState();
+    const [open, setOpen] = useTariffDialogState();
 
     return null;
 };
