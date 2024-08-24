@@ -7,11 +7,13 @@ import Link from 'next/link';
 import { cn } from '@next-test-task/ui';
 import { Modal, ModalRoot, ModalTriger } from '@next-test-task/ui/modal';
 
+import { useTariffDialogState } from '~/features/TariffDialog';
 import { Tariffs } from '~/features/Tariffs';
 
 export default () => {
     const [isBorderActive, setIsBorderActive] = useState<boolean>(false);
     const [isMounted, setIsMounted] = useState<boolean>(false);
+    const [isModalOpen, setIsModalOpen] = useTariffDialogState();
 
     useEffect(() => {
         if (!isMounted) {
@@ -34,7 +36,7 @@ export default () => {
     }, [isMounted]);
 
     return (
-        <ModalRoot>
+        <ModalRoot open={isModalOpen} onOpenChange={setIsModalOpen}>
             <div
                 className={cn(
                     'align-center fixed flex h-24 w-full justify-between bg-white pl-4 pr-8',
