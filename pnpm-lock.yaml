@@ -320,6 +320,27 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
+  packages/jotai:
+    devDependencies:
+      '@next-test-task/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@next-test-task/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@next-test-task/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: ^9.0.0
+        version: 9.0.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      typescript:
+        specifier: ^5.4.3
+        version: 5.4.4
+
   packages/logger:
     dependencies:
       '@t3-oss/env-nextjs':

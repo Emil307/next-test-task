@@ -63,6 +63,9 @@ export default ({ children }: React.PropsWithChildren) => {
                     'font-inter text-black antialiased',
                     inter.variable
                 )}
+                style={{
+                    scrollbarGutter: 'stable',
+                }}
             >
                 <Providers>
                     {children}
